@@ -13,5 +13,19 @@ function openLink(evt, linkName) {
     evt.currentTarget.className += " w3-red";
 }
 
+
+// 彈出視窗程式
 // Click on the first tablink on load
 document.getElementsByClassName("tablink")[0].click();
+
+
+var modalElem = document.getElementById("tyModal");
+var spanElem = document.getElementsByClassName("tyClose")[0];
+
+spanElem.onclick = function () {
+  modalElem.style.display = "none";
+};
+
+setTimeout(function () {
+  modalElem.style.display = "block";
+}, 1000);
